@@ -16,5 +16,5 @@
     Cross-Platform: Node.js is compatible with various operating systems, including Windows, macOS, and Linux, making it a versatile choice for building server-side applications that can run on different platforms without modification.
 
     Use Cases: Node.js is commonly used for building web servers, API servers, real-time applications (such as chat applications and online gaming servers), streaming applications, and serverless computing functions.
-
+    
     Overall, Node.js has become a popular choice for web developers due to its speed, scalability, and the ability to use JavaScript on both the client and server sides, enabling full-stack JavaScript development. It has a large and active community of developers and a rich ecosystem of libraries and frameworks that make it a powerful tool for building a wide range of web applications.
