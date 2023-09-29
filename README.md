@@ -226,3 +226,35 @@ Maintainability: Code that relies heavily on global variables can be harder to u
 Debugging: Debugging becomes more challenging when you have many global variables, as tracking down the source of a bug related to a specific variable can be complex.
 
 To mitigate these issues, it's often recommended to minimize the use of global variables and instead use local variables within functions or blocks. This helps encapsulate data and functionality, making your code more modular and easier to manage. If you do need to share data between different parts of your code, consider using function parameters and return values or other techniques like module patterns or the use of objects to create namespaces for your variables and functions. This approach promotes better code organization and reduces the risk of naming conflicts.
+
+<h2>What is Constants in JavaScript</h2>
+
+In JavaScript, constants are variables declared using the const keyword that have a fixed, unchangeable value after they are assigned. Constants are used to represent values that should not be modified or reassigned once they are initialized. They are also block-scoped, meaning they are only accessible within the block (enclosed by curly braces {}) in which they are defined, similar to variables declared with let.
+
+Here's how you declare and use constants in JavaScript:
+
+const pi = 3.14159; // Declare and initialize a constant named pi
+
+console.log(pi); // Access the constant value
+
+// Attempting to reassign a constant will result in an error
+// pi = 3.14; // This line would produce a syntax error
+
+
+Key characteristics of constants in JavaScript:
+
+Immutable Value: Once a value is assigned to a constant, it cannot be modified or reassigned. Any attempt to do so will result in a syntax error.
+
+Block Scope: Constants are block-scoped, just like variables declared with let. They are only accessible within the block where they are defined.
+
+Descriptive Naming: Like variables, constants should have meaningful and descriptive names to indicate their purpose.
+
+Use Uppercase for Constants: It's a common convention in JavaScript to use uppercase letters and underscores to name constants. For example, MAX_VALUE, PI, DEFAULT_COLOR.
+
+Here's an example of using constants to represent configuration values:
+
+const API_KEY = "your_api_key";
+const MAX_RESULTS = 10;
+const DEFAULT_COLOR = "blue";
+
+Constants are especially useful for defining values that should remain constant throughout the execution of your program, such as mathematical constants (e.g., π), configuration settings, or values that represent important thresholds or limits. They can help make your code more self-documenting and reduce the risk of accidental reassignment or modification of important values.
