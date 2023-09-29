@@ -137,3 +137,57 @@ Here's a summary of hoisting:
 Variables declared with var are hoisted, but only the declarations are moved to the top, not the initializations.
 Function declarations are hoisted along with their definitions.
 To avoid potential issues related to hoisting, it's recommended to use let and const for variable declarations, which have block scope and do not exhibit the same hoisting behavior as var. Additionally, it's good practice to declare variables and functions at the top of their containing scope to make the code's behavior more predictable and understandable.
+
+<h2>What is Scope in JavaScript</h2>
+In JavaScript, scope refers to the context in which variables and functions are declared and accessed. It defines the visibility and accessibility of variables and functions within your code. Understanding scope is crucial for writing clean and maintainable JavaScript code. JavaScript has two main types of scope: global scope and local scope.
+
+<h3>Global Scope:</h3>
+
+Variables and functions declared in the global scope are accessible from anywhere in your JavaScript code, including inside functions or blocks.
+Global variables are typically declared outside of any function or block. They are accessible throughout your entire script.
+Functions declared in the global scope can be called from anywhere in your code.
+Be cautious when using global variables, as they can lead to naming conflicts and make your code harder to manage.
+Example of a global variable and function:
+
+var globalVar = "I'm global"; // Global variable
+
+function globalFunction() {
+  console.log("I'm a global function");
+}
+
+<h3>Local Scope:</h3>
+
+Local scope refers to the context within a function or block. Variables and functions declared inside a function or block have local scope.
+Local variables are only accessible within the function or block where they are defined. They are not visible outside of that context.
+Functions declared inside another function (nested functions) have access to variables declared in their outer (enclosing) function, creating a chain of nested scopes.
+Example of local variables and functions:
+
+function outerFunction() {
+  var localVar = "I'm local"; // Local variable
+
+  function innerFunction() {
+    console.log(localVar); // Accesses the localVar from the outer function
+  }
+
+  innerFunction(); // Calls the inner function
+}
+
+outerFunction(); // Calls the outer function
+
+
+<h3>Block Scope (Introduced with let and const)</h3>
+
+Variables declared using let and const inside a block (enclosed by curly braces {}) have block scope.
+Block-scoped variables are only accessible within the block in which they are defined.
+Block scope can be used in situations like for loops, if statements, and other block structures to limit variable visibility.
+Example of block-scoped variable:
+
+if (true) {
+  let blockVar = "I'm block-scoped"; // Block-scoped variable
+  console.log(blockVar); // Accessible within the block
+}
+
+// console.log(blockVar); // This would result in an error since blockVar is not accessible here
+
+
+Understanding the concept of scope is vital for preventing naming conflicts, optimizing code performance, and creating modular and maintainable code in JavaScript. It helps you control the visibility and lifetime of variables and functions within your programs.
