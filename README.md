@@ -17,7 +17,7 @@
 <p>In JavaScript, a variable is a named container that is used to store data values. Variables allow you to store and manipulate data in your programs. Here are some key points about variables in JavaScript:</p>
 
 
-Variable Declaration: You can declare a variable using the var, let, or const keyword. The choice of keyword affects the variable's scope and mutability.
+1. Variable Declaration: You can declare a variable using the var, let, or const keyword. The choice of keyword affects the variable's scope and mutability.
 
 var: Variables declared with var are function-scoped, meaning they are only accessible within the function in which they are defined or globally if declared outside any function. They can be reassigned.
 
