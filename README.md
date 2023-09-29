@@ -86,4 +86,54 @@ Avoid One-Letter Names: While single-letter variable names like i, j, and k are 
 Consistency: Be consistent in your naming conventions throughout your codebase. If you choose camelCase for variable names, stick to it across all variables.
 
 
-        
+<h2>What is Hoisting in JavaScript</h2>
+
+Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. This can lead to some unexpected behavior if you're not aware of how hoisting works. Hoisting applies to both variables declared with var and function declarations.
+
+Here's a breakdown of hoisting for variables and functions:
+
+<h3>Variable Hoisting (using var):</h3>
+
+Declaration vs. Initialization: When you declare a variable using var, the declaration is hoisted, but the initialization (assigning a value to the variable) remains in place. This means that the variable is moved to the top of its containing function or global scope, but its value is not assigned until the code execution reaches the original declaration.
+
+Eg.
+console.log(myVar); // undefined (not an error)
+var myVar = 42;
+
+In this example, myVar is hoisted, so it exists in the scope, but its value is undefined until the line where it's initialized.
+
+Function Scoping: Variables declared with var are function-scoped. This means they are accessible throughout the function in which they are declared, regardless of where the declaration appears within the function.
+
+Eg.
+
+function example() {
+  console.log(innerVar); // undefined (not an error)
+  if (true) {
+    var innerVar = 10;
+  }
+  console.log(innerVar); // 10
+}
+
+In this example, innerVar is function-scoped and exists throughout the example function.
+
+<h3>Function Hoisting (using function declarations):</h3>
+
+Function Declarations: Function declarations are also hoisted. This means you can call a function before it's declared in the code.
+
+Eg.
+
+sayHello(); // "Hello, World!"
+
+function sayHello() {
+  console.log("Hello, World!");
+}
+
+The function sayHello is hoisted to the top of its containing scope, so you can call it before its actual declaration.
+
+Note: It's important to distinguish between function declarations and function expressions. Function expressions (where a function is assigned to a variable) are not hoisted in the same way as function declarations.
+
+Here's a summary of hoisting:
+
+Variables declared with var are hoisted, but only the declarations are moved to the top, not the initializations.
+Function declarations are hoisted along with their definitions.
+To avoid potential issues related to hoisting, it's recommended to use let and const for variable declarations, which have block scope and do not exhibit the same hoisting behavior as var. Additionally, it's good practice to declare variables and functions at the top of their containing scope to make the code's behavior more predictable and understandable.
