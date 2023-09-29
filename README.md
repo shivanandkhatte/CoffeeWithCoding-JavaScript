@@ -191,3 +191,38 @@ if (true) {
 
 
 Understanding the concept of scope is vital for preventing naming conflicts, optimizing code performance, and creating modular and maintainable code in JavaScript. It helps you control the visibility and lifetime of variables and functions within your programs.
+
+
+<h2>What is Global Variables in JavaScript</h2>
+
+Global variables in JavaScript are variables that are declared outside of any function or block and are accessible from anywhere within your JavaScript code. These variables have a global scope, meaning they are available throughout the entire script, including inside functions and blocks. Global variables are declared using the var, let, or const keyword without any enclosing function or block.
+
+Here's an example of a global variable declared with var:
+
+
+var globalVar = "I'm a global variable";
+
+function exampleFunction() {
+  console.log(globalVar); // Accesses the global variable
+}
+
+exampleFunction(); // Calls the function, which can access the global variable
+console.log(globalVar); // Accesses the global variable outside the function
+
+
+
+Global variables can also be declared using let or const:
+
+let globalLet = "I'm a global variable";
+const globalConst = "I'm another global variable";
+
+
+However, it's important to be cautious when using global variables for the following reasons:
+
+Potential Conflicts: If you use the same variable name in different parts of your code, you may unintentionally overwrite or modify the global variable's value, leading to unexpected behavior and bugs.
+
+Maintainability: Code that relies heavily on global variables can be harder to understand and maintain, as it's not always clear where a variable is being modified or accessed.
+
+Debugging: Debugging becomes more challenging when you have many global variables, as tracking down the source of a bug related to a specific variable can be complex.
+
+To mitigate these issues, it's often recommended to minimize the use of global variables and instead use local variables within functions or blocks. This helps encapsulate data and functionality, making your code more modular and easier to manage. If you do need to share data between different parts of your code, consider using function parameters and return values or other techniques like module patterns or the use of objects to create namespaces for your variables and functions. This approach promotes better code organization and reduces the risk of naming conflicts.
