@@ -349,6 +349,10 @@ JavaScript's dynamic typing is one of the language's distinctive features, and i
 
 
 
+<h2>Data Type In JavaScript</h2>
+
+
+
 
 
 
