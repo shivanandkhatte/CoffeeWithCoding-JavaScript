@@ -1,9 +1,0 @@
-
-const myArr=[]
-%DebugPrint(myArr)
-
-
- 
-
-
-
